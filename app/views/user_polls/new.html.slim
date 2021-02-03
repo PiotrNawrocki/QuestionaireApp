@@ -1,0 +1,4 @@
+.d-flex.justify-content-center
+  = simple_form_for @user_poll do |f|
+    = f.input :poll_id, collection: @polls, label_method: :description, selected: params[:poll_id]
+    = f.submit "Complete the survey"

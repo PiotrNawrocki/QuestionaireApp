@@ -1,0 +1,8 @@
+head
+  title Polls
+  .d-flex.justify-content-center
+    h1 Welcome to my questionnaires world!
+body
+  .d-flex.justify-content-center
+    - @polls.each do |poll|
+      = link_to poll.description, new_user_poll_path(poll_id: poll.id)

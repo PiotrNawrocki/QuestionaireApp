@@ -1,0 +1,4 @@
+= @user_poll.poll.description
+- @set.each do |f|
+  = f.question.content
+= link_to 'Next step', user_poll_path(step: @step += 1)
