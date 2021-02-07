@@ -1,4 +1,5 @@
 = @user_poll.poll.description
 - @set.each do |f|
   = f.question.content
+  = f.input , as: input_types[f.question.question_type.to_sym]
 = link_to 'Next step', user_poll_path(step: @step += 1)

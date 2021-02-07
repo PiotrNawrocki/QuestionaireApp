@@ -4,7 +4,7 @@ poll = Poll.create(description: 'Choose your favorite operating system')
 
 first_name = Question.create(content: 'First Name', question_type: 'text')
 birth_date = Question.create(content: 'Birth date', question_type: 'date')
-os_choice = Question.create(content: 'OS of choice', question_type: 'choose')
+os_choice = Question.create(content: 'OS of choice', question_type: 'choice')
 about = Question.create(content: 'Something about you (140 characters top)', question_type: 'text')
 mac_os = Answer.create(content: 'Mac OS')
 linux = Answer.create(content: 'Linux')

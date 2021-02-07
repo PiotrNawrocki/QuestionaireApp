@@ -22,16 +22,16 @@ ActiveRecord::Schema.define(version: 2021_02_02_220441) do
   end
 
   create_table "poll_question_answers", force: :cascade do |t|
-    t.bigint "poll_questions_id"
-    t.bigint "answers_id"
-    t.bigint "user_polls_id"
+    t.bigint "poll_question_id"
+    t.bigint "answer_id"
+    t.bigint "user_poll_id"
     t.text "content"
     t.date "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["answers_id"], name: "index_poll_question_answers_on_answers_id"
-    t.index ["poll_questions_id"], name: "index_poll_question_answers_on_poll_questions_id"
-    t.index ["user_polls_id"], name: "index_poll_question_answers_on_user_polls_id"
+    t.index ["answer_id"], name: "index_poll_question_answers_on_answer_id"
+    t.index ["poll_question_id"], name: "index_poll_question_answers_on_poll_question_id"
+    t.index ["user_poll_id"], name: "index_poll_question_answers_on_user_poll_id"
   end
 
   create_table "poll_questions", force: :cascade do |t|

@@ -3,9 +3,9 @@
 class CreatePollQuestionAnswers < ActiveRecord::Migration[6.1]
   def change
     create_table :poll_question_answers do |t|
-      t.references :poll_questions
-      t.references :answers
-      t.references :user_polls
+      t.references :poll_question
+      t.references :answer
+      t.references :user_poll
       t.text :content
       t.date :date
       t.timestamps
